@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Number Range Checker</h2>
+<p>Enter two numbers where the first is smaller than the second:</p>
+
+Min: <input type="number" id="minNum"><br><br>
+Max: <input type="number" id="maxNum"><br><br>
+<button onclick="validate()">Check</button>
+
+<p id="result" style="color:red"></p>
+
+<script>
+function validate() {
+  let min = document.getElementById("minNum").value;
+  let max = document.getElementById("maxNum").value;
+  let output = document.getElementById("result");
+  
+  if(isNaN(min) || isNaN(max)) {
+    output.innerHTML = "Please enter numbers only!";
+  }
+  else if(parseFloat(min) >= parseFloat(max)) {
+    output.innerHTML = "Minimum must be smaller than maximum!";
+  }
+  else {
+    output.style.color = "green";
+    output.innerHTML = "Valid range! (" + min + " to " + max + ")";
+  }
+}
+</script>
+</body>
+</html>

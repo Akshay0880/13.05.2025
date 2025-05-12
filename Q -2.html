@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Shortcut Math Operators</h2>
+<p>See how these operators work:</p>
+<p id="math"></p>
+
+<script>
+let x = 10;
+document.getElementById("math").innerHTML = "Start: x = " + x;
+
+x += 5; // Same as x = x + 5
+document.getElementById("math").innerHTML += "<br>After x += 5: " + x;
+
+x -= 3; // Same as x = x - 3
+document.getElementById("math").innerHTML += "<br>After x -= 3: " + x;
+
+x *= 2; // Same as x = x * 2
+document.getElementById("math").innerHTML += "<br>After x *= 2: " + x;
+
+x /= 4; // Same as x = x / 4
+document.getElementById("math").innerHTML += "<br>After x /= 4: " + x;
+</script>
+</body>
+</html>

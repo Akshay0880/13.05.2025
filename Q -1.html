@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Variable Type Magic</h2>
+<p>Watch how one variable changes its type:</p>
+<p id="demo"></p>
+
+<script>
+let message = "Starting as text";
+document.getElementById("demo").innerHTML = "1. " + message + " (" + typeof message + ")";
+
+message = 100; // Now it's a number
+document.getElementById("demo").innerHTML += "<br>2. " + message + " (" + typeof message + ")";
+
+message = true; // Now it's boolean
+document.getElementById("demo").innerHTML += "<br>3. " + message + " (" + typeof message + ")";
+
+message = {name:"John"}; // Now it's an object
+document.getElementById("demo").innerHTML += "<br>4. [object] (" + typeof message + ")";
+</script>
+</body>
+</html>
